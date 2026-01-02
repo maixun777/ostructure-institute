@@ -48,6 +48,46 @@ body {
     margin: 60px auto;
     padding-bottom: 60px;
 }
+/* TEAM SECTION */
+.team-section {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.team-subtitle {
+    color: #cccccc;
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    padding: 0 10%;
+}
+
+.team-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 20px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.3s;
+}
+
+.team-card:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.team-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-bottom: 12px;
+    border: 2px solid #77caff;
+}
+
 
 /* ===============================
    LOGO ANIMATION
