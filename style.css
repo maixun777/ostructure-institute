@@ -106,3 +106,29 @@ footer {
     font-size: 14px;
     opacity: 0.5;
 }
+/* STARFIELD ANIMATION - RESTORE MOTION */
+
+/* Layer 1 */
+.stars {
+    animation: moveStars 50s linear infinite;
+}
+
+/* Layer 2 */
+.stars2 {
+    animation: moveStars 100s linear infinite;
+}
+
+/* Layer 3 */
+.stars3 {
+    animation: moveStars 150s linear infinite;
+}
+
+/* Keyframes */
+@keyframes moveStars {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-2000px);
+    }
+}
