@@ -1,93 +1,73 @@
-/* GLOBAL BACKGROUND */
+/* ---- GLOBAL RESET ---- */
 body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
     background: black;
-    font-family: "Segoe UI", sans-serif;
-    color: #e6e6e6;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 
-/* STAR LAYERS */
+/* ---- STAR BACKGROUND ---- */
 .stars, .stars2, .stars3 {
     position: fixed;
     width: 100%;
     height: 100%;
+    top: 0; left: 0;
     background-repeat: repeat;
-    background-size: contain;
     z-index: -1;
 }
 
-.stars {
-    background-image: radial-gradient(2px 2px at 20px 20px, white, rgba(255,255,255,0));
-    animation: moveStars 60s linear infinite;
-    opacity: 0.4;
-}
+.stars { background-image: url("https://raw.githubusercontent.com/joshkerr/space-stars/master/stars.png"); opacity: 0.5; }
+.stars2 { background-image: url("https://raw.githubusercontent.com/joshkerr/space-stars/master/stars2.png"); opacity: 0.4; }
+.stars3 { background-image: url("https://raw.githubusercontent.com/joshkerr/space-stars/master/stars3.png"); opacity: 0.3; }
 
-.stars2 {
-    background-image: radial-gradient(2px 2px at 60px 100px, #7fcfff, rgba(127,207,255,0));
-    animation: moveStars2 90s linear infinite;
-    opacity: 0.3;
-}
-
-.stars3 {
-    background-image: radial-gradient(1px 1px at 120px 200px, #ffaaee, rgba(255,170,238,0));
-    animation: moveStars3 120s linear infinite;
-    opacity: 0.2;
-}
-
-@keyframes moveStars {
-    from { transform: translateY(0); }
-    to { transform: translateY(-2000px); }
-}
-@keyframes moveStars2 {
-    from { transform: translateY(0); }
-    to { transform: translateY(-1500px); }
-}
-@keyframes moveStars3 {
-    from { transform: translateY(0); }
-    to { transform: translateY(-1000px); }
-}
-
-/* CONTENT AREA */
+/* ---- CONTENT AREA ---- */
 .content {
     text-align: center;
-    padding: 60px 10%;
+    margin: 50px 10%;
 }
 
-h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-    letter-spacing: 2px;
+/* ---- LOGO ANIMATION ---- */
+.logo {
+    animation: fadein 1.5s ease-out forwards;
+    opacity: 0;
+    margin-top: 20px;
 }
 
-h2 {
-    font-size: 18px;
-    font-weight: 300;
+@keyframes fadein {
+    from { opacity: 0; transform: scale(0.8); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+/* ---- NAVIGATION ---- */
+.nav {
+    margin-top: 30px;
     margin-bottom: 40px;
+}
+
+.nav a {
+    color: #77caff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 20px;
     opacity: 0.8;
 }
 
-.sections a {
-    margin: 0 15px;
-    color: #77caff;
-    text-decoration: none;
-    font-size: 18px;
-}
-.sections a:hover {
-    color: white;
+.nav a:hover {
+    opacity: 1;
 }
 
+/* ---- HEADERS ---- */
+h1 { font-size: 48px; margin-top: 10px; }
+h2 { font-size: 24px; font-weight: 300; opacity: 0.8; margin-bottom: 40px; }
+h3 { font-size: 26px; margin-bottom: 15px; color: #9ad7ff; }
+
+/* ---- SECTIONS ---- */
 section {
-    margin-top: 60px;
+    margin: 40px auto;
     font-size: 18px;
-    line-height: 1.7;
+    line-height: 1.8;
     opacity: 0.9;
-}
-
-h3 {
-    font-size: 26px;
-    margin-bottom: 15px;
-    color: #ffffff;
-    letter-spacing: 1px;
+    max-width: 900px;
 }
