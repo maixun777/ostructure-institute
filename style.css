@@ -1,4 +1,6 @@
-/* ---- GLOBAL RESET ---- */
+/* ===============================
+   GLOBAL RESET
+================================ */
 body {
     margin: 0;
     padding: 0;
@@ -8,39 +10,105 @@ body {
     overflow-x: hidden;
 }
 
-/* ---- STAR BACKGROUND ---- */
+/* ===============================
+   STARFIELD BACKGROUND LAYERS
+================================ */
 .stars, .stars2, .stars3 {
     position: fixed;
     width: 100%;
     height: 100%;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     background-repeat: repeat;
     z-index: -1;
 }
 
-.stars { background-image: url("https://raw.githubusercontent.com/joshkerr/space-stars/master/stars.png"); opacity: 0.5; }
-.stars2 { background-image: url("https://raw.githubusercontent.com/joshkerr/space-stars/master/stars2.png"); opacity: 0.4; }
-.stars3 { background-image: url("https://raw.githubusercontent.com/joshkerr/space-stars/master/stars3.png"); opacity: 0.3; }
-
-/* ---- CONTENT AREA ---- */
-.content {
-    text-align: center;
-    margin: 50px 10%;
+.stars {
+    background-image: url("https://raw.githubusercontent.com/joshkerr/space-stars/master/stars.png");
+    opacity: 0.55;
 }
 
-/* ---- LOGO ANIMATION ---- */
+.stars2 {
+    background-image: url("https://raw.githubusercontent.com/joshkerr/space-stars/master/stars2.png");
+    opacity: 0.4;
+}
+
+.stars3 {
+    background-image: url("https://raw.githubusercontent.com/joshkerr/space-stars/master/stars3.png");
+    opacity: 0.3;
+}
+
+/* ===============================
+   CONTENT LAYOUT
+================================ */
+.content {
+    text-align: center;
+    width: 90%;
+    max-width: 950px;
+    margin: 60px auto;
+    padding-bottom: 60px;
+}
+
+/* ===============================
+   LOGO ANIMATION
+================================ */
 .logo {
-    animation: fadein 1.5s ease-out forwards;
     opacity: 0;
-    margin-top: 20px;
+    animation: fadein 1.8s ease-out forwards;
+    margin-bottom: 15px;
 }
 
 @keyframes fadein {
-    from { opacity: 0; transform: scale(0.8); }
-    to   { opacity: 1; transform: scale(1); }
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
-/* ---- NAVIGATION ---- */
+/* ===============================
+   HEADERS
+================================ */
+h1 {
+    font-size: 48px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 300;
+    opacity: 0.85;
+    margin-bottom: 40px;
+}
+
+h3 {
+    font-size: 26px;
+    color: #9ad7ff;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+/* ===============================
+   SECTIONS
+================================ */
+section {
+    margin-top: 40px;
+    font-size: 18px;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+section p {
+    margin-bottom: 25px;
+}
+
+/* ===============================
+   NAVIGATION BAR
+================================ */
 .nav {
     margin-top: 30px;
     margin-bottom: 40px;
@@ -48,26 +116,23 @@ body {
 
 .nav a {
     color: #77caff;
-    margin: 0 15px;
+    margin: 0 18px;
     text-decoration: none;
     font-size: 20px;
-    opacity: 0.8;
+    opacity: 0.75;
+    transition: 0.3s;
 }
 
 .nav a:hover {
     opacity: 1;
+    text-shadow: 0 0 8px #77caff;
 }
 
-/* ---- HEADERS ---- */
-h1 { font-size: 48px; margin-top: 10px; }
-h2 { font-size: 24px; font-weight: 300; opacity: 0.8; margin-bottom: 40px; }
-h3 { font-size: 26px; margin-bottom: 15px; color: #9ad7ff; }
-
-/* ---- SECTIONS ---- */
-section {
-    margin: 40px auto;
-    font-size: 18px;
-    line-height: 1.8;
-    opacity: 0.9;
-    max-width: 900px;
+/* ===============================
+   FOOTER
+================================ */
+footer p {
+    font-size: 15px;
+    line-height: 1.6;
+    opacity: 0.6;
 }
