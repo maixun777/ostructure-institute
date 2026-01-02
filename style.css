@@ -1,178 +1,167 @@
-/* ===============================
-   GLOBAL RESET
-================================ */
-body {
+/* GLOBAL RESET */
+* {
     margin: 0;
     padding: 0;
-    background: black;
-    color: white;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    color: #fff;
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
     overflow-x: hidden;
 }
 
-/* ===============================
-   STARFIELD BACKGROUND LAYERS
-================================ */
+/* MAIN CONTENT WRAPPER */
+.content {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+/* LOGO */
+.logo {
+    margin-bottom: 20px;
+}
+
+/* TITLES */
+h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    opacity: 0.8;
+}
+
+/* NAVIGATION */
+.nav a {
+    margin: 0 15px;
+    color: #77caff;
+    text-decoration: none;
+    font-size: 18px;
+}
+.nav a:hover {
+    color: white;
+}
+
+/* STARFIELD BACKGROUND */
 .stars, .stars2, .stars3 {
     position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    background-repeat: repeat;
-    z-index: -1;
+    background-size: contain;
+    pointer-events: none;
 }
 
 .stars {
-    background-image: url("https://raw.githubusercontent.com/joshkerr/space-stars/master/stars.png");
-    opacity: 0.55;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='3' height='3'><circle cx='1.5' cy='1.5' r='1.5' fill='white'/></svg>");
+    animation: moveStars 60s linear infinite;
+    opacity: 0.2;
 }
 
 .stars2 {
-    background-image: url("https://raw.githubusercontent.com/joshkerr/space-stars/master/stars2.png");
-    opacity: 0.4;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='3' height='3'><circle cx='1.5' cy='1.5' r='1.5' fill='#77caff'/></svg>");
+    animation: moveStars2 90s linear infinite;
+    opacity: 0.35;
 }
 
 .stars3 {
-    background-image: url("https://raw.githubusercontent.com/joshkerr/space-stars/master/stars3.png");
-    opacity: 0.3;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='3' height='3'><circle cx='1.5' cy='1.5' r='1.5' fill='white'/></svg>");
+    animation: moveStars3 120s linear infinite;
+    opacity: 0.15;
 }
 
-/* ===============================
-   CONTENT LAYOUT
-================================ */
-.content {
-    text-align: center;
-    width: 90%;
-    max-width: 950px;
-    margin: 60px auto;
-    padding-bottom: 60px;
+@keyframes moveStars {
+    from { transform: translateY(0px); }
+    to { transform: translateY(-1500px); }
 }
+@keyframes moveStars2 {
+    from { transform: translateY(0px); }
+    to { transform: translateY(-1000px); }
+}
+@keyframes moveStars3 {
+    from { transform: translateY(0px); }
+    to { transform: translateY(-700px); }
+}
+
+/* ABOUT SECTION */
+.about {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* RESEARCH DOMAINS */
+.domains {
+    margin-top: 50px;
+    margin-bottom: 60px;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.domains h3 {
+    margin-top: 30px;
+    color: #77caff;
+}
+
 /* TEAM SECTION */
 .team-section {
-    margin-top: 80px;
-    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 80px;
 }
 
 .team-subtitle {
-    color: #cccccc;
-    margin-bottom: 40px;
-    font-size: 18px;
+    opacity: 0.7;
+    margin-bottom: 30px;
 }
 
 .team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 40px;
-    padding: 0 10%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
 }
 
 .team-card {
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(255,255,255,0.03);
     padding: 20px;
+    width: 260px;
     border-radius: 14px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255,255,255,0.05);
     transition: 0.3s;
 }
 
 .team-card:hover {
     transform: translateY(-6px);
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255,255,255,0.08);
 }
 
-.team-avatar {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    margin-bottom: 12px;
-    border: 2px solid #77caff;
-}
-
-
-/* ===============================
-   LOGO ANIMATION
-================================ */
-.logo {
-    opacity: 0;
-    animation: fadein 1.8s ease-out forwards;
-    margin-bottom: 15px;
-}
-
-@keyframes fadein {
-    from {
-        opacity: 0;
-        transform: scale(0.85);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-/* ===============================
-   HEADERS
-================================ */
-h1 {
-    font-size: 48px;
-    margin-top: 10px;
-    margin-bottom: 15px;
-}
-
-h2 {
-    font-size: 22px;
-    font-weight: 300;
-    opacity: 0.85;
-    margin-bottom: 40px;
-}
-
-h3 {
-    font-size: 26px;
-    color: #9ad7ff;
-    margin-top: 40px;
-    margin-bottom: 15px;
-}
-
-/* ===============================
-   SECTIONS
-================================ */
-section {
-    margin-top: 40px;
-    font-size: 18px;
-    line-height: 1.8;
-    opacity: 0.9;
-}
-
-section p {
-    margin-bottom: 25px;
-}
-
-/* ===============================
-   NAVIGATION BAR
-================================ */
-.nav {
-    margin-top: 30px;
-    margin-bottom: 40px;
-}
-
-.nav a {
+.team-card h3 {
+    margin-bottom: 10px;
     color: #77caff;
-    margin: 0 18px;
-    text-decoration: none;
-    font-size: 20px;
-    opacity: 0.75;
-    transition: 0.3s;
 }
 
-.nav a:hover {
-    opacity: 1;
-    text-shadow: 0 0 8px #77caff;
+.team-card p {
+    opacity: 0.85;
+    line-height: 1.4;
 }
 
-/* ===============================
-   FOOTER
-================================ */
-footer p {
-    font-size: 15px;
-    line-height: 1.6;
+/* FOOTER */
+footer {
+    margin-top: 60px;
+    font-size: 12px;
     opacity: 0.6;
 }
