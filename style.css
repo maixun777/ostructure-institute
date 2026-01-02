@@ -1,0 +1,93 @@
+/* GLOBAL BACKGROUND */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: black;
+    font-family: "Segoe UI", sans-serif;
+    color: #e6e6e6;
+}
+
+/* STAR LAYERS */
+.stars, .stars2, .stars3 {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-repeat: repeat;
+    background-size: contain;
+    z-index: -1;
+}
+
+.stars {
+    background-image: radial-gradient(2px 2px at 20px 20px, white, rgba(255,255,255,0));
+    animation: moveStars 60s linear infinite;
+    opacity: 0.4;
+}
+
+.stars2 {
+    background-image: radial-gradient(2px 2px at 60px 100px, #7fcfff, rgba(127,207,255,0));
+    animation: moveStars2 90s linear infinite;
+    opacity: 0.3;
+}
+
+.stars3 {
+    background-image: radial-gradient(1px 1px at 120px 200px, #ffaaee, rgba(255,170,238,0));
+    animation: moveStars3 120s linear infinite;
+    opacity: 0.2;
+}
+
+@keyframes moveStars {
+    from { transform: translateY(0); }
+    to { transform: translateY(-2000px); }
+}
+@keyframes moveStars2 {
+    from { transform: translateY(0); }
+    to { transform: translateY(-1500px); }
+}
+@keyframes moveStars3 {
+    from { transform: translateY(0); }
+    to { transform: translateY(-1000px); }
+}
+
+/* CONTENT AREA */
+.content {
+    text-align: center;
+    padding: 60px 10%;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    opacity: 0.8;
+}
+
+.sections a {
+    margin: 0 15px;
+    color: #77caff;
+    text-decoration: none;
+    font-size: 18px;
+}
+.sections a:hover {
+    color: white;
+}
+
+section {
+    margin-top: 60px;
+    font-size: 18px;
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+h3 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
