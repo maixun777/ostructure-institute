@@ -1,47 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research – Ω-Structure Institute</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+# Ω-Structure Institute  
+### Independent Global Research Lab on Civilization Structures, CSOC, and Future Value Systems
 
-<body>
+Ω-Structure Institute is a non-commercial, independent research initiative focused on uncovering the deep generative structures that shape civilizations, intelligence, value systems, and cosmic event dynamics.
 
-<div class="stars"></div>
-<div class="stars2"></div>
-<div class="stars3"></div>
+Our work spans four primary research domains:
 
-<div class="content">
+---
 
-    <img src="logo.svg" width="150" class="logo">
+## **1. Structure Science**
+Study of deep generative rules, meta-structures, structural invariants, and civilization architecture.  
+This area seeks to identify the underlying code-like principles that organize complex societal and cosmic behavior.
 
-    <h1>Research Themes</h1>
+---
 
-    <section>
-        <h3>Structure Science</h3>
-        <p>Study of generative rules, meta-structures, and civilization architecture.</p>
-    </section>
+## **2. Fifth-Generation Value Systems (FGVS)**
+A next-generation framework for civilization-level value computation.  
+Research includes:
+- Population anchors  
+- Life-value metrics  
+- Structural monetary logic  
+- Long-horizon economic behavior  
 
-    <section>
-        <h3>Fifth-Generation Value Systems</h3>
-        <p>Population anchors, life-value metrics, and structural monetary logic.</p>
-    </section>
+---
 
-    <section>
-        <h3>Computational Cosmology (CSOC)</h3>
-        <p>Code-first cosmology, event-generation physics, and signal-based causality.</p>
-    </section>
+## **3. Computational Cosmology (CSOC)**
+A code-first cosmology model proposing that **generative code precedes events**.  
+Research directions include:
+- Event-generation physics  
+- Signal-based causality  
+- Behavioral loops of physical and social systems  
+- Code → Event → State sequencing  
 
-    <section>
-        <h3>Civilization Dynamics</h3>
-        <p>Rise, collapse, transitions, and long-term behavior loops of civilizations.</p>
-    </section>
+---
 
-    <a href="index.html" style="color:#77caff; font-size:20px;">← Back to Home</a>
+## **4. Civilization Dynamics**
+Modeling rise, collapse, transitions, and long-term attractor states of civilizations.  
+This includes:
+- Structural phase transitions  
+- Loop-based behavioral evolution  
+- Long-cycle civilizational patterns  
 
-</div>
+---
 
-</body>
-</html>
+## **Website Structure**
+This repository contains the full source of the Ω-Structure Institute website:
+
+- **index.html** – Main homepage  
+- **research.html** – Research themes  
+- **founder.html** – Founder & scientific background  
+- **csoc.html** – Computational cosmology  
+- **fgvs.html** – Fifth-generation value systems  
+- **style.css** – Unified design system  
+- **logo.svg** – Ω + starfield insignia  
+
+---
+
+## **Founder**
+**Ω-Structure M+**  
+Independent researcher working across structure science, CSOC, long-term value frameworks, and civilization architecture.
+
+---
+
+## **Non-commercial Position**
+Ω-Structure Institute operates without commercial activity, taxation obligations, or financial services.  
+The research direction focuses purely on structural science, civilization analysis, and future-value system modeling.
+
+---
+
+© Ω-Structure Institute  
