@@ -1,178 +1,130 @@
+/* ===== Base ===== */
 :root{
   --bg:#000;
   --fg:#eaeaea;
   --muted:#b8b8b8;
-  --accent:#77caff;
-  --card:rgba(255,255,255,0.06);
-  --border:rgba(255,255,255,0.12);
+  --link:#7ecbff;
+  --max: 980px;
+  --pad: 24px;
+  --nav-h: 72px;
+  --radius: 14px;
 }
 
-*{box-sizing:border-box;}
-html,body{height:100%;}
+*{ box-sizing:border-box; }
+html,body{ height:100%; }
 body{
   margin:0;
   background:var(--bg);
   color:var(--fg);
-  font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial;
-  line-height:1.85;
-  overflow-x:hidden;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height:1.7;
 }
 
-a{color:var(--accent); text-decoration:none;}
-a:hover{text-decoration:underline;}
+/* ===== Links ===== */
+a{ color:var(--link); text-decoration:none; }
+a:hover{ text-decoration:underline; }
 
-.page{
-  position:relative;
-  z-index:2;
-  max-width:980px;
-  margin:0 auto;
-  padding:56px 22px 80px;
-  text-align:center;
-}
-
-.logo{display:block; margin:0 auto 14px; opacity:0.95;}
-
-.block{
-  margin:18px auto;
-  padding:18px 18px;
+/* ===== Top Nav (fixed, centered) ===== */
+header.nav{
+  position: sticky;
+  top:0;
+  z-index:50;
+  background: rgba(0,0,0,.72);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,.08);
 }
 
-h1{
-  margin:0 0 10px;
-  font-size:46px;
-  line-height:1.15;
-  letter-spacing:0.3px;
-}
-h2{
-  margin:26px 0 10px;
-  font-size:22px;
-  color:var(--fg);
-  letter-spacing:0.2px;
-}
-h3{
-  margin:0 0 8px;
-  font-size:18px;
-  color:var(--fg);
-}
-
-.lead{
-  margin:8px auto 0;
-  color:var(--muted);
-  max-width:860px;
-  font-size:16px;
-}
-
-.nav{
-  margin-top:16px;
-  display:flex;
-  justify-content:center;
-  gap:22px;
-  flex-wrap:wrap;
-  font-size:15px;
-}
-
-.stack{
-  max-width:900px;
-  margin:0 auto;
-  display:flex;
-  flex-direction:column;
-  gap:14px;
-}
-
-.card{
-  text-align:left;
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:14px;
-  padding:14px 16px;
-}
-
-.card p{margin:0; color:var(--muted);}
-
-.mono{
-  max-width:900px;
-  margin:0 auto;
-  color:var(--muted);
-  font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace;
-  font-size:14px;
-  line-height:1.9;
-}
-
-.closing{
-  margin:0;
-  color:var(--muted);
-  letter-spacing:0.2px;
-}
-
-/* ============ STARFIELD (ANIMATED) ============ */
-.stars,.stars2,.stars3{
-  position:fixed;
-  top:0; left:0; right:0; bottom:0;
-  background-repeat:repeat;
-  background-position:0 0;
-  z-index:0;
-  pointer-events:none;
-  opacity:0.9;
-}
-.stars{
-  background-image:
-    radial-gradient(1px 1px at 25px 5px, #ffffff, transparent 60%),
-    radial-gradient(1px 1px at 120px 80px, #ffffff, transparent 60%),
-    radial-gradient(1px 1px at 210px 140px, #ffffff, transparent 60%),
-    radial-gradient(1px 1px at 300px 20px, #ffffff, transparent 60%),
-    radial-gradient(1px 1px at 420px 180px, #ffffff, transparent 60%),
-    radial-gradient(1px 1px at 520px 60px, #ffffff, transparent 60%);
-  background-size: 600px 220px;
-  animation: drift 70s linear infinite;
-  opacity:0.55;
-}
-.stars2{
-  background-image:
-    radial-gradient(1px 1px at 15px 35px, #77caff, transparent 60%),
-    radial-gradient(1px 1px at 160px 120px, #ffffff, transparent 60%),
-    radial-gradient(1px 1px at 260px 30px, #77caff, transparent 60%),
-    radial-gradient(1px 1px at 380px 160px, #ffffff, transparent 60%),
-    radial-gradient(1px 1px at 540px 140px, #77caff, transparent 60%);
-  background-size: 620px 260px;
-  animation: drift2 120s linear infinite;
-  opacity:0.38;
-}
-.stars3{
-  background-image:
-    radial-gradient(1px 1px at 80px 30px, #ffffff, transparent 60%),
-    radial-gradient(1px 1px at 220px 190px, #ffffff, transparent 60%),
-    radial-gradient(1px 1px at 460px 90px, #ffffff, transparent 60%);
-  background-size: 560px 240px;
-  animation: drift3 180s linear infinite;
-  opacity:0.25;
-}
-
-@keyframes drift{
-  from{transform:translate3d(0,0,0);}
-  to{transform:translate3d(-400px, 260px,0);}
-}
-@keyframes drift2{
-  from{transform:translate3d(0,0,0);}
-  to{transform:translate3d(320px, 420px,0);}
-}
-@keyframes drift3{
-  from{transform:translate3d(0,0,0);}
-  to{transform:translate3d(-260px, -360px,0);}
-}
-/* === Core Content Container === */
-.page {
-  max-width: 880px;
+.nav-inner{
+  max-width: var(--max);
   margin: 0 auto;
-  padding: 120px 24px 160px;
+  padding: 14px var(--pad);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
 }
 
-.page h1,
-.page h2,
-.page h3 {
-  text-align: left;
+.logo{
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  display:grid;
+  place-items:center;
+  border: 1px solid rgba(255,255,255,.14);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: .02em;
+  user-select:none;
 }
 
-.page p,
-.page li {
-  line-height: 1.75;
+.nav-links{
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  font-size: 14px;
+  opacity:.95;
+}
+
+.nav-links a{
+  padding: 6px 8px;
+  border-radius: 10px;
+}
+.nav-links a:hover{
+  background: rgba(255,255,255,.06);
+  text-decoration:none;
+}
+
+/* ===== Page Container (ONLY layout owner) ===== */
+main.page{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 56px var(--pad) 72px;
+}
+
+/* ===== Typography ===== */
+h1{
+  margin: 0 0 10px;
+  font-size: 44px;
+  line-height:1.15;
+  letter-spacing: .02em;
+}
+
+.subtitle{
+  margin: 0 0 34px;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+/* Section blocks */
+h2{
+  margin: 28px 0 8px;
+  font-size: 18px;
+  letter-spacing: .02em;
+  color: #cfefff;
+}
+p{ margin: 0 0 14px; color: var(--fg); }
+
+/* Small divider */
+.hr{
+  height:1px;
+  background: rgba(255,255,255,.10);
+  margin: 26px 0;
+}
+
+/* ===== Footer ===== */
+footer.footer{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 18px var(--pad) 26px;
+  color: rgba(255,255,255,.55);
+  font-size: 12px;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 640px){
+  h1{ font-size: 34px; }
+  .nav-inner{ padding: 12px 16px; }
+  main.page{ padding: 40px 16px 56px; }
 }
