@@ -2,34 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CSOC × USC</title>
   <meta name="robots" content="index,follow" />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <!-- STARFIELD BACKGROUND -->
-  <div class="stars"></div><div class="stars2"></div><div class="stars3"></div>
+  <div class="stars"></div>
+  <div class="stars2"></div>
+  <div class="stars3"></div>
 
   <main class="page">
-    <header class="block">
-      <img src="logo.svg" class="logo" width="140" alt="Ω" />
-      <h1>CSOC × USC</h1>
-      <p class="lead">
+
+    <!-- HEADER / HERO -->
+    <header class="block" style="text-align:center;">
+      <img
+        src="logo.svg"
+        class="logo"
+        alt="Ω"
+        style="width:180px; height:auto; margin-bottom:24px;"
+      />
+
+      <h1 style="margin-bottom:12px;">CSOC × USC</h1>
+
+      <p class="lead" style="max-width:720px; margin:0 auto 28px;">
         CSOC × USC does not seek adoption, validation, or dissemination.<br />
         It marks the existence of a source-level generative structure.
       </p>
 
-      <nav class="nav">
+      <nav class="nav" style="justify-content:center;">
         <a href="systems.html">Research</a>
         <a href="csoc.html">CSOC</a>
         <a href="mission.html">Mission</a>
         <a href="team.html">Team</a>
+        <a href="signals.html">Signals</a>
       </nav>
     </header>
 
+    <!-- CONTENT -->
     <section class="block">
-      <div class="stack">
+      <div class="stack" style="max-width:720px; margin:0 auto;">
         <div class="card">
           <h3>Source Structure Existence Statement</h3>
           <p><a href="source.html">Open</a></p>
@@ -47,12 +61,14 @@
       </div>
     </section>
 
-    <footer class="block">
+    <!-- FOOTER -->
+    <footer class="block" style="text-align:center;">
       <p class="closing">Recognition is not expected. It is observed.</p>
       <p class="mono" style="margin-top:10px;">
         Signal relay: osi.research666@gmail.com
       </p>
     </footer>
+
   </main>
 </body>
 </html>
