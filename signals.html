@@ -1,45 +1,119 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Public Signals — Ω-Structure Institute</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Public Signal Nodes · CSOC × USC</title>
+
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* ===== page layout fix ===== */
+    body {
+      overflow-x: hidden;
+    }
+
+    header.top {
+      position: relative;
+      text-align: center;
+      padding-top: 40px;
+      padding-bottom: 20px;
+    }
+
+    /* ===== LOGO (fixed size, not blocking nav) ===== */
+    .logo-wrap {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 18px;
+    }
+
+    .logo-wrap img {
+      width: 120px;
+      height: 120px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* ===== NAV always on top ===== */
+    nav.top-nav {
+      position: relative;
+      z-index: 20;
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    nav.top-nav a {
+      font-size: 14px;
+      opacity: 0.85;
+    }
+
+    /* ===== page container ===== */
+    main.page {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 20px 80px;
+    }
+
+    h1 {
+      margin-top: 10px;
+    }
+
+    .subtitle {
+      opacity: 0.75;
+      margin-bottom: 36px;
+    }
+
+    article.card {
+      margin-bottom: 22px;
+    }
+  </style>
 </head>
 
 <body>
 
-<header class="nav">
-  <div class="logo">
-    <img src="logo.svg" alt="Ω Logo" />
-  </div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="signals.html" class="active">Signals</a>
-    <a href="source.html">Source</a>
-    <a href="irreversibility.html">Irreversibility</a>
-    <a href="fork.html">Fork</a>
-    <a href="csoc.html">CSOC</a>
-  </nav>
-</header>
+  <!-- STARFIELD BACKGROUND -->
+  <div class="stars"></div>
+  <div class="stars2"></div>
+  <div class="stars3"></div>
 
-<main class="page">
+  <!-- ===== HEADER ===== -->
+  <header class="top">
 
-  <h1>Public Signal Nodes</h1>
-  <p class="subtitle">
-    Source-level structural statements. No interpretation provided.
-  </p>
+    <nav class="top-nav">
+      <a href="index.html">Home</a>
+      <a href="signals.html">Signals</a>
+      <a href="source.html">Source</a>
+      <a href="irreversibility.html">Irreversibility</a>
+      <a href="fork.html">Fork</a>
+      <a href="csoc.html">CSOC</a>
+    </nav>
 
-  <section class="cards">
+    <div class="logo-wrap">
+      <img src="logo.svg" alt="Ω" />
+    </div>
+
+  </header>
+
+  <!-- ===== CONTENT ===== -->
+  <main class="page">
+
+    <h1>Public Signal Nodes</h1>
+    <p class="subtitle">
+      Source-level structural statements. No interpretation provided.
+    </p>
 
     <article class="card">
       <h2>Public Node #1 — Code-First Execution</h2>
       <p>
         Events are not primary causes. They are execution traces of deeper generative rules.
       </p>
-      <div class="collapse">
+      <p class="collapse">
         If no rule-level operators can explain cross-domain regularities, this structure collapses.
-      </div>
+      </p>
     </article>
 
     <article class="card">
@@ -48,9 +122,9 @@
         A finite primitive alphabet constrains all higher-level diversity.
         Complexity emerges through composition, not expansion of primitives.
       </p>
-      <div class="collapse">
+      <p class="collapse">
         If unlimited novelty requires unlimited primitives, this structure collapses.
-      </div>
+      </p>
     </article>
 
     <article class="card">
@@ -59,9 +133,9 @@
         Execution traces do not uniquely reconstruct their generators.
         Irreversibility is structural, not historical.
       </p>
-      <div class="collapse">
+      <p class="collapse">
         If full reconstruction from events is always possible, this structure collapses.
-      </div>
+      </p>
     </article>
 
     <article class="card">
@@ -70,9 +144,9 @@
         Physics, biology, and computation share invariants when downstream
         of the same operator family.
       </p>
-      <div class="collapse">
+      <p class="collapse">
         If no invariant survives cross-domain projection, this structure collapses.
-      </div>
+      </p>
     </article>
 
     <article class="card">
@@ -81,18 +155,19 @@
         Recognition of code-first generation forces a shift from event narratives
         to operator identification.
       </p>
-      <div class="collapse">
+      <p class="collapse">
         If civilization can progress without this shift, this structure collapses.
-      </div>
+      </p>
     </article>
 
-  </section>
+  </main>
 
-</main>
-
-<footer class="footer">
-  Ω-Structure Institute — Independent Non-Commercial Research in Structural Science.
-</footer>
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    Ω-Structure Institute — Independent Non-Commercial Research in Structural Science.
+    <br />
+    Public contact: <a href="mailto:osi.research666@gmail.com">osi.research666@gmail.com</a>
+  </footer>
 
 </body>
 </html>
