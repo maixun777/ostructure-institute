@@ -2,172 +2,145 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Public Signal Nodes · CSOC × USC</title>
-
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Signals — Ω-Structure Institute</title>
+  <meta name="robots" content="index,follow" />
   <link rel="stylesheet" href="style.css" />
 
+  <!-- page-level fixes -->
   <style>
-    /* ===== page layout fix ===== */
-    body {
-      overflow-x: hidden;
-    }
-
-    header.top {
-      position: relative;
-      text-align: center;
-      padding-top: 40px;
-      padding-bottom: 20px;
-    }
-
-    /* ===== LOGO (fixed size, not blocking nav) ===== */
-    .logo-wrap {
-      position: relative;
-      width: 120px;
-      height: 120px;
-      margin: 0 auto 18px;
-    }
-
-    .logo-wrap img {
-      width: 120px;
-      height: 120px;
-      display: block;
-      margin: 0 auto;
-    }
-
-    /* ===== NAV always on top ===== */
-    nav.top-nav {
-      position: relative;
-      z-index: 20;
+    /* top navigation */
+    .top-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 14px 28px;
       display: flex;
       justify-content: center;
-      gap: 18px;
-      margin-bottom: 30px;
-      flex-wrap: wrap;
+      gap: 22px;
+      background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.35),
+        rgba(0,0,0,0)
+      );
+      backdrop-filter: blur(6px);
     }
 
-    nav.top-nav a {
+    .top-nav a {
       font-size: 14px;
-      opacity: 0.85;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(220,235,255,0.85);
+      text-decoration: none;
+      transition: color 0.2s ease;
     }
 
-    /* ===== page container ===== */
-    main.page {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 0 20px 80px;
+    .top-nav a:hover {
+      color: #ffffff;
     }
 
-    h1 {
-      margin-top: 10px;
+    /* page spacing to avoid nav overlap */
+    .page {
+      padding-top: 110px;
     }
 
-    .subtitle {
-      opacity: 0.75;
-      margin-bottom: 36px;
-    }
-
-    article.card {
-      margin-bottom: 22px;
+    /* logo size control (no more blocking nav) */
+    .signal-logo {
+      width: 96px;
+      height: auto;
+      margin: 0 auto 18px;
+      display: block;
     }
   </style>
 </head>
 
 <body>
-
   <!-- STARFIELD BACKGROUND -->
   <div class="stars"></div>
   <div class="stars2"></div>
   <div class="stars3"></div>
 
-  <!-- ===== HEADER ===== -->
-  <header class="top">
+  <!-- FIXED TOP NAV -->
+  <nav class="top-nav">
+    <a href="index.html">Home</a>
+    <a href="signals.html">Signals</a>
+    <a href="source.html">Source</a>
+    <a href="irreversibility.html">Irreversibility</a>
+    <a href="fork.html">Fork</a>
+    <a href="csoc.html">CSOC</a>
+  </nav>
 
-    <nav class="top-nav">
-      <a href="index.html">Home</a>
-      <a href="signals.html">Signals</a>
-      <a href="source.html">Source</a>
-      <a href="irreversibility.html">Irreversibility</a>
-      <a href="fork.html">Fork</a>
-      <a href="csoc.html">CSOC</a>
-    </nav>
-
-    <div class="logo-wrap">
-      <img src="logo.svg" alt="Ω" />
-    </div>
-
-  </header>
-
-  <!-- ===== CONTENT ===== -->
   <main class="page">
 
-    <h1>Public Signal Nodes</h1>
-    <p class="subtitle">
-      Source-level structural statements. No interpretation provided.
-    </p>
+    <header class="block" style="text-align:center;">
+      <img src="logo.svg" alt="Ω" class="signal-logo" />
+      <h1>Public Signal Nodes</h1>
+      <p class="subtitle">
+        Source-level structural statements. No interpretation provided.
+      </p>
+    </header>
 
-    <article class="card">
-      <h2>Public Node #1 — Code-First Execution</h2>
-      <p>
-        Events are not primary causes. They are execution traces of deeper generative rules.
-      </p>
-      <p class="collapse">
-        If no rule-level operators can explain cross-domain regularities, this structure collapses.
-      </p>
-    </article>
+    <section class="block stack">
 
-    <article class="card">
-      <h2>Public Node #2 — Finite Alphabet Constraint</h2>
-      <p>
-        A finite primitive alphabet constrains all higher-level diversity.
-        Complexity emerges through composition, not expansion of primitives.
-      </p>
-      <p class="collapse">
-        If unlimited novelty requires unlimited primitives, this structure collapses.
-      </p>
-    </article>
+      <div class="card">
+        <h3>Public Node #1 — Code-First Execution</h3>
+        <p>
+          Events are not primary causes. They are execution traces of deeper generative rules.
+        </p>
+        <p class="mono">
+          If no rule-level operators can explain cross-domain regularities, this structure collapses.
+        </p>
+      </div>
 
-    <article class="card">
-      <h2>Public Node #3 — Irreversibility of Traces</h2>
-      <p>
-        Execution traces do not uniquely reconstruct their generators.
-        Irreversibility is structural, not historical.
-      </p>
-      <p class="collapse">
-        If full reconstruction from events is always possible, this structure collapses.
-      </p>
-    </article>
+      <div class="card">
+        <h3>Public Node #2 — Finite Alphabet Constraint</h3>
+        <p>
+          A finite primitive alphabet constrains all higher-level diversity.
+        </p>
+        <p class="mono">
+          If unlimited novelty requires unlimited primitives, this structure collapses.
+        </p>
+      </div>
 
-    <article class="card">
-      <h2>Public Node #4 — Cross-Domain Structural Invariants</h2>
-      <p>
-        Physics, biology, and computation share invariants when downstream
-        of the same operator family.
-      </p>
-      <p class="collapse">
-        If no invariant survives cross-domain projection, this structure collapses.
-      </p>
-    </article>
+      <div class="card">
+        <h3>Public Node #3 — Irreversibility of Traces</h3>
+        <p>
+          Execution traces do not uniquely reconstruct their generators.
+        </p>
+        <p class="mono">
+          If full reconstruction from events is always possible, this structure collapses.
+        </p>
+      </div>
 
-    <article class="card">
-      <h2>Public Node #5 — Civilizational Fork</h2>
-      <p>
-        Recognition of code-first generation forces a shift from event narratives
-        to operator identification.
-      </p>
-      <p class="collapse">
-        If civilization can progress without this shift, this structure collapses.
-      </p>
-    </article>
+      <div class="card">
+        <h3>Public Node #4 — Cross-Domain Structural Invariants</h3>
+        <p>
+          Physics, biology, and computation share invariants downstream of the same operator family.
+        </p>
+        <p class="mono">
+          If no invariant survives cross-domain projection, this structure collapses.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Public Node #5 — Civilizational Fork</h3>
+        <p>
+          Recognition of code-first generation forces a shift from event narratives to operator identification.
+        </p>
+        <p class="mono">
+          If civilization can progress without this shift, this structure collapses.
+        </p>
+      </div>
+
+    </section>
+
+    <footer class="block">
+      <p class="closing">Ω-Structure Institute — Independent Structural Research</p>
+    </footer>
 
   </main>
-
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    Ω-Structure Institute — Independent Non-Commercial Research in Structural Science.
-    <br />
-    Public contact: <a href="mailto:osi.research666@gmail.com">osi.research666@gmail.com</a>
-  </footer>
-
 </body>
 </html>
